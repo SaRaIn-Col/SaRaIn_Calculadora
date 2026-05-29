@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SaRaIn Calculadora</title>
 
 <style>
+
 body{
 font-family: Arial, sans-serif;
 background:#f5f0ff;
@@ -59,16 +61,20 @@ border:2px solid #f2c6e3;
 box-shadow:0 4px 15px rgba(212,139,179,0.2);
 }
 
-.resultado .titulo{
+.titulo{
 font-size:18px;
 color:#999;
 margin-bottom:10px;
 }
 
-.resultado .precio{
+.precio{
 font-size:42px;
 font-weight:bold;
 color:#6c3cc9;
+}
+
+p{
+margin:8px 0;
 }
 
 </style>
@@ -85,10 +91,20 @@ color:#6c3cc9;
 
 <label>💲 TRM del día</label> <input type="number" id="trm">
 
-<button onclick="calcular()">✨ Calcular Precio</button>
+<button onclick="calcular()">
+✨ Calcular Precio
+</button>
 
 <div class="resultado" id="resultado">
-🛍️ Resultado aquí
+
+<div class="titulo">
+🛍️ RESUMEN
+</div>
+
+<div class="precio">
+$0
+</div>
+
 </div>
 
 </div>
@@ -98,6 +114,7 @@ color:#6c3cc9;
 function calcular(){
 
 let precio = parseFloat(document.getElementById('precio').value);
+
 let trm = parseFloat(document.getElementById('trm').value);
 
 let totalUSD = precio + (precio*0.07) + (precio*0.20) + 3;
@@ -123,11 +140,6 @@ document.getElementById('resultado').innerHTML =
 "<p>🇨🇴 Total COP: $" + totalCOP.toLocaleString('es-CO') + "</p>" +
 
 "<div class='precio'>💖 $" + final.toLocaleString('es-CO') + "</div>";
-
-
-
-
-
 
 }
 
