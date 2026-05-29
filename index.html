@@ -107,7 +107,9 @@ let totalCOP = totalUSD * trm;
 let final = totalCOP * 1.60;
 
 document.getElementById('resultado').innerHTML =
-"🛍️ Precio final: $" + final.toLocaleString('es-CO');
+"<div class='titulo'>🛍️ PRECIO FINAL</div>" +
+"<div class='precio'>$" + final.toLocaleString('es-CO') + "</div>";
+
 
 }
 
