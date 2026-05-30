@@ -122,6 +122,8 @@ let totalUSD = precio + (precio*0.07) + (precio*0.20) + 3;
 let totalCOP = totalUSD * trm;
 
 let final = totalCOP * 1.60;
+  
+let ganancia = final - totalCOP;
 
 document.getElementById('resultado').innerHTML =
 
@@ -137,7 +139,9 @@ document.getElementById('resultado').innerHTML =
 
 "<hr>" +
 
-"<p>🇨🇴 Total COP: $" + totalCOP.toLocaleString('es-CO') + "</p>" +
+"<p>🇨🇴 Costo Total: $" + totalCOP.toLocaleString('es-CO') + "</p>" +
+
+"<p>💰 Ganancia: $" + ganancia.toLocaleString('es-CO') + "</p>" +
 
 "<div class='precio'>💖 $" + final.toLocaleString('es-CO') + "</div>";
 
